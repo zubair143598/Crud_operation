@@ -24,7 +24,7 @@ export default function Home() {
       <main>
         <div className="flex justify-center  grid-cols-1 text-center  flex-col border">
           {" "}
-          <div className="flex mt-4 lg:ml-96 border border-black rounded text-center w-[600px] p-8 justify-between bg-slate-300  ">
+          <div className="flex mt-4 lg:ml-96 border border-black rounded text-center lg:w-[600px] p-8 justify-between bg-slate-300  ">
             <input
               className="border border-black rounded"
               type="text"
