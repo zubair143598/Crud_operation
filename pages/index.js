@@ -24,7 +24,7 @@ export default function Home() {
       <main>
         <div className="flex justify-center  grid-cols-1 text-center  flex-col border">
           {" "}
-          <div className="flex mt-4 lg:ml-96 border border-black rounded text-center lg:w-[600px] p-8 justify-between bg-slate-300  ">
+          <div className="flex mt-4 lg:ml-96 border border-black rounded text-center sm:w-[600px] p-8 justify-between bg-slate-300  ">
             <input
               className="border border-black rounded"
               type="text"
@@ -60,7 +60,7 @@ export default function Home() {
           <div className="displayUsers">
             {userList.map((user, index) => {
               return (
-                <div key={index} className="  border border-black rounded text-left lg:w-[600px] p-8  bg-slate-300 mt-3 lg:mx-96 ">
+                <div key={index} className="  border border-black rounded text-left sm:w-[600px] p-8  bg-slate-300 mt-3 lg:mx-96 ">
                   <h1 className=" text-2xl font-bold"> Name: {user.name}</h1>
                   <h1 className=" text-2xl mb-2 font-bold"> UserName:{user.username}</h1>
                   <input
