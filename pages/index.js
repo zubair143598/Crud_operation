@@ -1,6 +1,3 @@
-// import { decremented, incremented } from "@/src/store/features/counterSlice";
-// import { addUser, deleteUser, updateUsername } from "./features/Users";
-
 import Head from "next/head";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
@@ -22,11 +19,11 @@ export default function Home() {
       </Head>
 
       <main>
-        <div className="flex justify-center  grid-cols-1 text-center  flex-col border">
+        <div className=" justify-center grid  grid-cols-1 text-center  flex-col border">
           {" "}
-          <div className="flex mt-4 lg:ml-96 border border-black rounded text-center sm:w-[600px] p-8 justify-between bg-slate-300  ">
+          <div className="sm:flex  mt-4 lg:ml-96 grid-cols-1 grid border border-black rounded text-left sm:text-center sm:w-[600px] p-8  bg-slate-300  ">
             <input
-              className="border border-black rounded"
+              className="border border-black sm:ml-2 mt-1 rounded"
               type="text"
               placeholder="Name..."
               onChange={(event) => {
@@ -34,15 +31,16 @@ export default function Home() {
               }}
             />
             <input
-              className="border border-black rounded"
+              className="border border-black sm:ml-2 mt-1 rounded"
               type="text"
               placeholder="Username..."
               onChange={(event) => {
                 setUsername(event.target.value);
               }}
             />
+            
             <button
-            className=" border bg-black border-white text-white p-2 px-4 rounded-lg "
+            className=" border bg-black sm:ml-2 mt-2 border-white text-white p-2 px-4 rounded-lg "
               onClick={() => {
                 dispatch(
                   addUser({
@@ -71,7 +69,7 @@ export default function Home() {
                       setNewUsername(event.target.value);
                     }}
                   />
-                  <button className="border bg-black ml-2 border-white text-white p-2 px-4 rounded-lg"
+                  <button className="border bg-black sm:ml-2 mt-3 border-white text-white p-2 px-4 rounded-lg"
                     onClick={() => {
                       dispatch(
                         updateUsername({ id: user.id, username: newUsername })
